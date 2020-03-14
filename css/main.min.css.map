@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAGM,WAHK,CACT,iBAAiB,CACf,uBAAuB,CACrB,uBAAuB,AAAC,CACtB,eAAe,CAAE,IAAI,CACtB",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/_nav.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
