@@ -1,0 +1,27 @@
+// bc2e3a
+
+.PageHeader {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("/assets/images/header_bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+  h2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    font-size: 16rem;
+    color: #fff;
+    opacity: 0.4;
+    font-weight: 400;
+  }
+}

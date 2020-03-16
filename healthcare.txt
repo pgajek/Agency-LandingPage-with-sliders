@@ -1,0 +1,55 @@
+1 Widok login
+    Logo
+    Dwa inputy, login & password
+    pod nimi przycisk, "Log in"
+    Nizej napis "Register new Account"
+
+2 Widok Home
+        Nawigacja "Logo" "BodySize" "Diet" "Trainings" "Profile" "LogOut"
+
+        Pole np prostokątne, z szklankami moze ich byc 8
+        Obok przyciski "+" i "-"
+        Taksamo pole z kieliszkami i przekaskami(po 4)
+
+        Pod tymi polami przycisk "Send"
+
+        Obok lub nizej Pola:
+            "Last Body Measurement" i Data pomiaru
+            "Last Meal"  zawiera nazwe posiłku i godzinę
+            "Last Training" Data i godzina
+
+        Na dole pole z Kalendarzem,
+        I stopka, logo, jakies dane kontaktowe
+
+3 Widok Body Size List
+        Nawigacja
+        Przycisk "Add new Measurement"
+        Lista Dat pomiarów, moze ich byc z czasem dużo
+
+4 Widok Body Size
+    To jest ten pierwszy widok który mi robiłaś
+
+5 Widok DietPage
+    Nawigacja
+    Kwadraciki z Nazwa posiłku i ilością Kcal
+
+    Na dole Dwa pola Inpu "Name" i "Kcal" obok nich przycisk "Dodaj"
+
+6 Widok Training
+    Nawigacja
+    Kwaraciki z treningiem Nazwa, Kcal "ElapsedTime+ (godziny:minuty)
+
+    Inputy "Name" "Kcal" "Hours" "minutes" przycisk "Add"
+
+7 Widok ProfilePage
+    Dane użydkownika:
+    "birthDate"
+    "drinkDemandPerDay" (cyferka)
+    "email"
+    "KcalDemandPerDay" do 4 cyferek
+    "nick"
+    "phoneNumber"
+
+    Nizej "change password"
+    A po przycisnieciu dwa inputy: "password" "repeatPassword"
+
