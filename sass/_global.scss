@@ -26,13 +26,13 @@ body {
   overflow-x: hidden;
 }
 .btn {
-  width: 192px;
-  height: 54px;
+  width: 120px;
+  height: 40px;
   box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.47);
   background-color: #fff;
   color: #242424;
   font-family: 'Lato', sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.32px;
@@ -46,4 +46,9 @@ body {
     background-color: #bc2e3a;
     color: #fff;
   }
+}
+@media (min-width: 1025px) {
+  width: 192px;
+  height: 54px;
+  font-size: 2.1rem;
 }
