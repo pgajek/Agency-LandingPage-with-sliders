@@ -4,7 +4,7 @@
 
 .navigation {
   position: fixed;
-  z-index: 99;
+  z-index: 90;
   top: 0;
   left: 0;
   width: 100vw;
@@ -16,21 +16,21 @@
   color: #fff;
   opacity: 0.3;
   transition: transform linear 0.3s, opacity linear 0.4s;
-  -webkit-transition: transform linear 0.3s, opacity linear 0.4s;
-  -moz-transition: transform linear 0.3s, opacity linear 0.4s;
-  -ms-transition: transform linear 0.3s, opacity linear 0.4s;
-  -o-transition: transform linear 0.3s, opacity linear 0.4s;
-  -webkit-transform: translateX(100vw);
-  -moz-transform: translateX(100vw);
-  -ms-transform: translateX(100vw);
-  -o-transform: translateX(100vw);
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
 }
 .navigation--active {
   transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
   opacity: 1;
 }
 .navigation__burger {
@@ -47,7 +47,7 @@
   div {
     background-color: #fff;
     border-radius: 3px;
-    content: "";
+    content: '';
     display: block;
     height: 3px;
     margin: 8px 0;
@@ -56,6 +56,9 @@
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+  }
+  &:focus {
+    outline: none;
   }
 }
 .navigation__burger--active {
@@ -71,15 +74,23 @@
   &:after {
     background-color: #fff;
     transform: translateY(-12px) rotate(-135deg);
+    -webkit-transform: translateY(-12px) rotate(-135deg);
+    -moz-transform: translateY(-12px) rotate(-135deg);
+    -ms-transform: translateY(-12px) rotate(-135deg);
+    -o-transform: translateY(-12px) rotate(-135deg);
   }
 
   & div {
     background-color: #fff;
     transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
   }
 }
 .navigation__logo {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
   height: 10%;
@@ -100,7 +111,7 @@
   width: 100%;
 }
 .navigation__link {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-decoration: none;
   color: #fff;
