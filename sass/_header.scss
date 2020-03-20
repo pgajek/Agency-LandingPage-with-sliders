@@ -1,27 +1,87 @@
-// bc2e3a
-
-.PageHeader {
+.pageHeader {
   height: 100vh;
   width: 100vw;
-  position: relative;
-  background-image: url("/assets/images/header_bg.jpg");
+  background-image: url('/assets/images/header_bg.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  &::before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-  }
-  h2 {
-    position: fixed;
-    top: 50%;
+  display: grid;
+  grid-template-areas: ' textWrapper';
+  padding: 10px;
+}
+.pageHeader__textWrapper {
+  width: 100%;
+  height: 100%;
+  grid-area: textWrapper;
+  position: relative;
+  display: flex;
+  .btn {
+    position: absolute;
+    bottom: 20%;
     left: 50%;
-    z-index: 3;
-    font-size: 16rem;
-    color: #fff;
-    opacity: 0.4;
-    font-weight: 400;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+.pageHeader__hgroup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('/assets/images/header_bg_gray.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.pageHeader__hgroupShade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  opacity: 0.4;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 1),
+    0 0 15px rgba(0, 0, 0, 1), 0 0 40px #000, 0 0 70px #000, 0 0 80px #000,
+    0 0 100px #000;
+  // text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+.pageHeader__header {
+  font-family: 'LemonMilkBold', sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+
+  &--h3 {
+    letter-spacing: 0.51px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pageHeader {
+    grid-template-areas:
+      'hgroup . model'
+      'hgroup . model';
+  }
+  .pageHeader__header {
+    font-size: 15.9rem;
+    letter-spacing: 0.32px;
+    &--h3 {
+      letter-spacing: 0.51px;
+      font-size: 9.6rem;
+    }
   }
 }

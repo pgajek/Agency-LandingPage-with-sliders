@@ -16,21 +16,9 @@
   color: #fff;
   opacity: 0.3;
   transition: transform linear 0.3s, opacity linear 0.4s;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
 }
 .navigation--active {
   transform: translateX(0);
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
   opacity: 1;
 }
 .navigation__burger {
