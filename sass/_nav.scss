@@ -35,7 +35,7 @@
   div {
     background-color: #fff;
     border-radius: 3px;
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     margin: 8px 0;
@@ -78,7 +78,7 @@
   }
 }
 .navigation__logo {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
   height: 10%;
@@ -99,7 +99,7 @@
   width: 100%;
 }
 .navigation__link {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   text-decoration: none;
   color: #fff;
@@ -126,19 +126,21 @@
   .navigation {
     opacity: 1;
     height: 60px;
+    width: 85vw;
+    left: 50%;
     background-color: transparent;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
   }
   .navigation__logo {
     height: 100%;
-    padding-left: 5%;
+    padding-left: 0;
   }
   .navigation__list {
     flex-direction: row;
