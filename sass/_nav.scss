@@ -153,7 +153,17 @@
     height: 100%;
     flex-grow: 1;
     font-size: 1.4rem;
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      width: 35%;
+      font-size: 2rem;
+    }
+    transition: color linear 0.3s;
+    &:hover > .navigation__link {
+      color: #aaa;
+    }
   }
+
   .navigation__burger {
     display: none;
   }
