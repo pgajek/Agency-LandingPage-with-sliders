@@ -40,8 +40,6 @@
   justify-items: center;
   align-items: center;
   padding: 10px 5px 0 5px;
-  .btn {
-  }
 }
 .aboutUs__btnWrapper {
   grid-area: button;
@@ -49,10 +47,6 @@
   @include grid-flex-center;
 }
 .aboutUs__header {
-  color: #494949;
-  font-family: "Peace Sans", sans-serif;
-  font-size: 4.2rem;
-  font-weight: 400;
   grid-area: header;
   @include grid-flex-center;
 }
@@ -111,9 +105,6 @@
   .aboutUs__article {
     grid-template-rows: 10vh 1fr 80px 1.5fr;
   }
-  .aboutUs__header {
-    font-size: 6.2rem;
-  }
   .aboutUs__screenWrapper {
     padding-top: 10px;
   }
@@ -136,9 +127,7 @@
     grid-template-rows: 50px 1fr 50px;
     grid-template-columns: 1fr 1fr;
   }
-  .aboutUs__header {
-    font-size: 4.2rem;
-  }
+
   .aboutUs__text {
     line-height: 30px;
     font-size: 1.4rem;
@@ -206,11 +195,6 @@
     grid-template-rows: 12% 50px 1fr 50px 12%;
   }
 }
-@media (orientation: landscape) and (min-width: 1200px) {
-  .aboutUs__header {
-    font-size: 6.2rem;
-  }
-}
 @media (orientation: landscape) and (min-width: 1400px) {
   .aboutUs__article {
     grid-template-rows: 10% 50px 1fr 50px 20%;
@@ -221,5 +205,3 @@
     grid-template-rows: 10% 50px 1fr 50px 10%;
   }
 }
-
-// header 6.2rem    text 1.7rem
