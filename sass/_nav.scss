@@ -39,6 +39,7 @@
     display: block;
     height: 3px;
     margin: 8px 0;
+    box-shadow: 0 1px 1px black;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -128,7 +129,9 @@
     height: 60px;
     width: 85vw;
     left: 50%;
-    background-color: transparent;
+    background-color: rgba(22, 22, 22, 0.3);
+    padding: 0 10px;
+    border-radius: 0 0 5px 5px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -137,6 +140,10 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
   }
   .navigation__logo {
     height: 100%;
