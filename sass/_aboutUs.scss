@@ -1,0 +1,225 @@
+.aboutUs {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    display: block;
+    content: "";
+    background-color: #171717;
+    height: 140vw;
+    width: 100vw;
+    position: absolute;
+    left: 40vw;
+    bottom: -40vw;
+    z-index: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+}
+
+.aboutUs__article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "text"
+    "button"
+    "screen";
+  grid-template-rows: 10vh 1fr 55px 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 10px 5px 0 5px;
+  .btn {
+  }
+}
+.aboutUs__btnWrapper {
+  grid-area: button;
+  max-width: 471px;
+  @include grid-flex-center;
+}
+.aboutUs__header {
+  color: #494949;
+  font-family: "Peace Sans", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 400;
+  grid-area: header;
+  @include grid-flex-center;
+}
+.aboutUs__text {
+  color: #6a6a6a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 30px;
+  grid-area: text;
+  padding: 0 10px;
+  max-width: 471px;
+  max-height: 108px;
+  @include grid-flex-center;
+}
+.aboutUs__screenWrapper {
+  grid-area: screen;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.aboutUs__screen,
+.aboutUs__innerScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+@media (orientation: portrait) and (min-width: 360px) {
+  .aboutUs {
+    height: 85vh;
+    &::before {
+      height: 140vw;
+      width: 80vw;
+      left: 40vw;
+      bottom: -55vw;
+    }
+  }
+}
+@media (orientation: portrait) and (min-width: 768px) {
+  .aboutUs {
+    height: 60vh;
+    &::before {
+      height: 120vw;
+      width: 80vw;
+      left: 60vw;
+      bottom: -55vw;
+    }
+  }
+  .aboutUs__article {
+    grid-template-rows: 10vh 1fr 80px 1.5fr;
+  }
+  .aboutUs__header {
+    font-size: 6.2rem;
+  }
+  .aboutUs__screenWrapper {
+    padding-top: 10px;
+  }
+}
+@media (orientation: landscape) {
+  .aboutUs {
+    &::before {
+      height: 100vw;
+      width: 100vw;
+      left: 30vw;
+      bottom: 70vh;
+    }
+  }
+  .aboutUs__article {
+    padding: 3% 5px;
+    grid-template-areas:
+      "header screen"
+      "text screen"
+      "button screen";
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutUs__header {
+    font-size: 4.2rem;
+  }
+  .aboutUs__text {
+    line-height: 30px;
+    font-size: 1.4rem;
+    padding: 0 2% 0 5%;
+  }
+  .aboutUs__btnWrapper,
+  .aboutUs__header {
+    justify-content: flex-start;
+    padding-left: 5%;
+  }
+}
+@media (orientation: landscape) and (min-width: 730px) {
+  .aboutUs__text,
+  .aboutUs__header,
+  .aboutUs__btnWrapper {
+    padding-left: 10%;
+  }
+  .aboutUs__article {
+    padding: 7% 5px;
+  }
+}
+@media (orientation: landscape) and (min-height: 768px) {
+  .aboutUs {
+    height: 60vh;
+    &::before {
+      height: 100vw;
+      width: 100vw;
+      left: 30vw;
+      bottom: 25vh;
+    }
+  }
+  .aboutUs__article {
+    grid-template-areas:
+      ". screen"
+      "header screen"
+      "text screen"
+      "button screen"
+      ". screen";
+    grid-template-rows: 12% 50px 1fr 50px 12%;
+    text-align: left;
+
+    padding: 4% 5px;
+  }
+  .aboutUs__header {
+    max-width: 471px;
+  }
+}
+@media (orientation: landscape) and (min-height: 1024px) {
+  .aboutUs {
+    height: 50vh;
+    &::before {
+      height: 100vw;
+      width: 100vw;
+      left: 30vw;
+      bottom: 25vh;
+    }
+  }
+  .aboutUs__article {
+    grid-template-areas:
+      ". screen"
+      "header screen"
+      "text screen"
+      "button screen"
+      ". screen";
+    grid-template-rows: 12% 50px 1fr 50px 12%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1200px) {
+  .aboutUs__header {
+    font-size: 6.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1400px) {
+  .aboutUs__article {
+    grid-template-rows: 10% 50px 1fr 50px 20%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1600px) {
+  .aboutUs__article {
+    grid-template-rows: 10% 50px 1fr 50px 10%;
+  }
+}
+
+// header 6.2rem    text 1.7rem
