@@ -6,3 +6,5 @@ const nav = document.querySelector(".navigation");
 
 window.addEventListener("scroll", () => CheckNavPosition(nav));
 burger.addEventListener("click", () => HandleBurgerClick(nav, burger));
+
+const TeamSlider = new Slider(".team__slide", true);

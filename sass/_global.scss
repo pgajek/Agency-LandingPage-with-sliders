@@ -77,6 +77,33 @@ body {
   font-size: 4.2rem;
   font-weight: 400;
 }
+.rectangleImage {
+  width: 180px;
+  height: 180px;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  & > img {
+    transform-origin: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: rotate(45deg) translate(-50%, -50%);
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+    -moz-transform: rotate(45deg) translate(-50%, -50%);
+    -ms-transform: rotate(45deg) translate(-50%, -50%);
+    -o-transform: rotate(45deg) translate(-50%, -50%);
+  }
+  box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.42);
+}
 @media (orientation: portrait) and (min-width: 768px) {
   .header2 {
     font-size: 6.2rem;
