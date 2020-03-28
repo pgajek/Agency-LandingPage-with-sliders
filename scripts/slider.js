@@ -1,5 +1,5 @@
 export default class Slider {
-  constructor(elemSelector) {
+  constructor(elemSelector, activeClass, nextClass, previousClass) {
     this.currentSlide = 0;
     this.sliderSelector = elemSelector;
     this.sliderElem = null;
@@ -9,16 +9,29 @@ export default class Slider {
     this.arrowRight = null;
     this.generateSlider();
     this.changeSlide(this.currentSlide);
-    this.slideActiveClass = null;
-    this.previousSlideClass = null;
-    this.nextSlideClass = null;
+    this.slideActiveClass = activeClass;
+    this.previousSlideClass = previousClass;
+    this.nextSlideClass = nextClass;
   }
   changeSlide(slideIndex) {
     this.slides.forEach(slide => {
       slide.classList.remove("team__member--active");
+      slide.classList.remove("team__member--left");
+      slide.classList.remove("team__member--right");
       slide.setAttribute("aria-hidden", true);
     });
+    let nextSlideIndex = slideIndex + 1;
+    console.log(nextSlideIndex);
+    let prevSlideIndex = slideIndex - 1;
+    console.log(prevSlideIndex);
+    if (slideIndex == 0) {
+      prevSlideIndex = this.slides.length - 1;
+    } else if (slideIndex == this.slides.length - 1) {
+      nextSlideIndex = 0;
+    }
 
+    this.slides[nextSlideIndex].classList.add("team__member--right");
+    this.slides[prevSlideIndex].classList.add("team__member--left");
     this.slides[slideIndex].classList.add("team__member--active");
     this.slides[slideIndex].setAttribute("aria-hidden", false);
 
