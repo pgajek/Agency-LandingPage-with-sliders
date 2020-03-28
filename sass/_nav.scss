@@ -15,7 +15,11 @@
   background-color: #222222;
   color: #fff;
   opacity: 0.3;
-  transition: transform linear 0.3s, opacity linear 0.4s;
+  transition: transform ease 0.2s, opacity ease 0.2s;
+  -webkit-transition: transform ease 0.2s, opacity ease 0.2s;
+  -moz-transition: transform ease 0.2s, opacity ease 0.2s;
+  -ms-transition: transform ease 0.2s, opacity ease 0.2s;
+  -o-transition: transform ease 0.2s, opacity ease 0.2s;
   &--active {
     transform: translateX(0);
     opacity: 1;

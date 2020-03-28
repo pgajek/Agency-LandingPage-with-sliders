@@ -12,3 +12,7 @@ export function CheckNavPosition(nav) {
     nav.classList.remove("navigation--bgc");
   }
 }
+export function HandleNavLinkClick(nav, burger) {
+  nav.classList.remove("navigation--active");
+  burger.classList.remove("navigation__burger--active");
+}
