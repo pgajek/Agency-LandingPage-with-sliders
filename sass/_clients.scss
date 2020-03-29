@@ -1,0 +1,89 @@
+.clients {
+  width: 100vw;
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "clientWrapper"
+    "textWrapper"
+    "smallWrapper";
+  grid-template-columns: 1fr;
+  grid-template-rows: 9rem 250px 180px 120px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 9rem;
+    background-color: #bc2e3a;
+    height: 177px;
+    width: 177px;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+}
+.clients__header {
+  grid-area: header;
+  font-size: 3.5rem;
+  @include grid-flex-center;
+}
+.clients__clientsWrapper {
+  grid-area: clientWrapper;
+  position: relative;
+  @include grid-flex-center;
+}
+.clients__client {
+  &--big {
+    position: absolute;
+    grid-area: image;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -moz-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    -o-transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &--small {
+    position: relative;
+    border-width: 5px;
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
+  transform-origin: center;
+}
+
+.clients__textWrapper {
+  grid-area: textWrapper;
+  color: #6a6a6a;
+  font-family: "Open Sans";
+  padding: 5px 15px;
+}
+.clienct__quote {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  padding: 3px 0;
+}
+.clients__clientName {
+  font-family: "Open Sans Bold";
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  padding: 3px 0;
+}
+.clients__smallWrapper {
+  grid-area: smallWrapper;
+  @include grid-flex-center;
+  justify-content: space-between;
+  padding: 0 10px;
+}

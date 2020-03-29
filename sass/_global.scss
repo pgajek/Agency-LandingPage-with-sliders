@@ -6,6 +6,22 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+@keyframes comeFromRight {
+  0% {
+    transform: translate(10%);
+    -webkit-transform: translate(10%);
+    -moz-transform: translate(10%);
+    -ms-transform: translate(10%);
+    -o-transform: translate(10%);
+  }
+  100% {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+}
 @font-face {
   font-family: "LemonMilkBold";
   src: url("/assets/fonts/Lemon-Milk-bold.ttf.woff") format("woff");
@@ -37,7 +53,14 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
+.opacity {
+  &--full {
+    opacity: 1;
+  }
+  &--none {
+    opacity: 0;
+  }
+}
 .btn {
   display: flex;
   align-items: center;
@@ -71,6 +94,10 @@ body {
   }
   z-index: 15;
 }
+.comeFromRight {
+  animation: comeFromRight 0.8s ease;
+  -webkit-animation: comeFromRight 0.8s ease;
+}
 .header2 {
   color: #494949;
   font-family: "Peace Sans", sans-serif;
@@ -84,11 +111,7 @@ body {
   overflow: hidden;
   position: relative;
   transform-origin: 0 0;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+
   & > img {
     transform-origin: 0 0;
     position: absolute;
