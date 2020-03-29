@@ -2,10 +2,11 @@
   display: grid;
   width: 100vw;
   height: 350px;
+  max-height: 100vh;
   grid-template-areas:
     "header"
     "slider";
-  grid-template-rows: 7rem 1fr;
+  grid-template-rows: 12rem 1fr;
   grid-template-columns: 1fr;
   padding: 0 5px;
   background-color: #f5f5f5;
@@ -18,6 +19,7 @@
   grid-template-columns: 25px 1fr 25px;
   width: 100%;
   height: 100%;
+  justify-content: center;
 }
 .team__arrow {
   width: 0;
@@ -48,6 +50,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .team__member {
   position: absolute;
@@ -66,19 +69,19 @@
   }
   &--left {
     opacity: 0;
-    transform: translateX(-100vw);
-    -webkit-transform: translateX(-100vw);
-    -moz-transform: translateX(-100vw);
-    -ms-transform: translateX(-100vw);
-    -o-transform: translateX(-100vw);
+    transform: translate(-100vw, -50%);
+    -webkit-transform: translate(-100vw, -50%);
+    -moz-transform: translate(-100vw, -50%);
+    -ms-transform: translate(-100vw, -50%);
+    -o-transform: translate(-100vw, -50%);
   }
   &--right {
-    transform: translateX(100vw);
     opacity: 0;
-    -webkit-transform: translateX(100vw);
-    -moz-transform: translateX(100vw);
-    -ms-transform: translateX(100vw);
-    -o-transform: translateX(100vw);
+    transform: translate(100vw, -50%);
+    -webkit-transform: translate(100vw, -50%);
+    -moz-transform: translate(100vw, -50%);
+    -ms-transform: translate(100vw, -50%);
+    -o-transform: translate(100vw, -50%);
   }
   transition: ease 1s;
   -webkit-transition: ease 1s;
@@ -161,19 +164,171 @@
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
-//member name
-// width: 273px;
-// height: 49px;
-// font-size: 24px;
-// font-weight: 700;
-// line-height: 39.43px;
-
-//member tittle
-// width: 169px;
-// height: 30px;
-// font-size: 19px;
-// line-height: 31.97px;
-
-// border-left: 48px solid transparent;
-// border-right: 48px solid transparent;
-// border-bottom: 48px solid #424240;
+@media (orientation: portrait) and (min-width: 768px) {
+  .team {
+    height: 65vh;
+    max-height: 795px;
+  }
+  .team__header {
+    font-size: 6.2rem;
+  }
+  .team__slide {
+    grid-template-columns: 48px 520px 48px;
+  }
+  .team__arrow {
+    cursor: pointer;
+    &--arrowLeft {
+      grid-area: arrowLeft;
+      border-top: 48px solid transparent;
+      border-right: 48px solid #424240;
+      border-bottom: 48px solid transparent;
+    }
+    &--arrowRight {
+      grid-area: arrowRight;
+      border-top: 48px solid transparent;
+      border-left: 48px solid #424240;
+      border-bottom: 48px solid transparent;
+    }
+  }
+  .team__member {
+    height: 500px;
+    width: 500px;
+  }
+  .team__memberName {
+    width: 273px;
+    height: 49px;
+    font-size: 24px;
+    line-height: 40px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+  }
+  .team__memberRole {
+    width: 169px;
+    height: 30px;
+    font-size: 19px;
+    line-height: 31.97px;
+    bottom: -25px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+  }
+}
+@media (orientation: landscape) {
+  .team__slide {
+    grid-template-columns: 25px 300px 25px;
+  }
+  .team__header {
+    font-size: 4.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  .team {
+    height: 85vh;
+    max-height: 795px;
+  }
+  .team__header {
+    font-size: 6.2rem;
+  }
+  .team__slide {
+    grid-template-columns: 48px 520px 48px;
+  }
+  .team__arrow {
+    cursor: pointer;
+    &--arrowLeft {
+      grid-area: arrowLeft;
+      border-top: 48px solid transparent;
+      border-right: 48px solid #424240;
+      border-bottom: 48px solid transparent;
+    }
+    &--arrowRight {
+      grid-area: arrowRight;
+      border-top: 48px solid transparent;
+      border-left: 48px solid #424240;
+      border-bottom: 48px solid transparent;
+    }
+  }
+  .team__member {
+    height: 500px;
+    width: 500px;
+  }
+  .team__memberName {
+    width: 273px;
+    height: 49px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .team__memberRole {
+    width: 169px;
+    height: 30px;
+    font-size: 19px;
+    line-height: 31.97px;
+    bottom: -25px;
+  }
+}
+@media (orientation: landscape) and (min-width: 1200px) {
+  .team__header {
+    font-size: 6.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .team {
+    justify-items: center;
+  }
+  .team__slide {
+    grid-template-columns: 48px 1fr 48px;
+    padding: 0 10px;
+    max-width: 1280px;
+  }
+  .team__member {
+    height: 500px;
+    width: 500px;
+    opacity: 0;
+    &--active {
+      opacity: 1;
+      z-index: 10;
+      .team__memberName,
+      .team__memberRole {
+        opacity: 1;
+      }
+    }
+    &--left {
+      z-index: 2;
+      opacity: 0.7;
+      transform: translate($leftMemberTransform, -50%) scale(0.45);
+      -webkit-transform: translate($leftMemberTransform, -50%) scale(0.45);
+      -moz-transform: translate($leftMemberTransform, -50%) scale(0.45);
+      -ms-transform: translate($leftMemberTransform, -50%) scale(0.45);
+      -o-transform: translate($leftMemberTransform, -50%) scale(0.45);
+      .team__memberName,
+      .team__memberRole {
+        opacity: 0;
+      }
+    }
+    &--right {
+      z-index: 2;
+      opacity: 0.7;
+      transform: translate($rightMemberTransform, -50%) scale(0.45);
+      -webkit-transform: translate($rightMemberTransform, -50%) scale(0.45);
+      -moz-transform: translate($rightMemberTransform, -50%) scale(0.45);
+      -ms-transform: translate($rightMemberTransform, -50%) scale(0.45);
+      -o-transform: translate($rightMemberTransform, -50%) scale(0.45);
+      .team__memberName,
+      .team__memberRole {
+        opacity: 0;
+      }
+    }
+    &--behind {
+      z-index: -1;
+      transform: translate(-50%, -50%) scale(0);
+      -webkit-transform: translate(-50%, -50%) scale(0);
+      -moz-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+      -o-transform: translate(-50%, -50%) scale(0);
+    }
+  }
+}

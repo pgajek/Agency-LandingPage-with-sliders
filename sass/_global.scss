@@ -108,10 +108,21 @@ body {
   .header2 {
     font-size: 6.2rem;
   }
+  .rectangleImage {
+    width: 355px;
+    height: 355px;
+  }
 }
+
 @media (orientation: landscape) {
   .header2 {
     font-size: 4.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  .rectangleImage {
+    width: 355px;
+    height: 355px;
   }
 }
 @media (orientation: landscape) and (min-width: 1200px) {

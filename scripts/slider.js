@@ -18,23 +18,32 @@ export default class Slider {
       slide.classList.remove("team__member--active");
       slide.classList.remove("team__member--left");
       slide.classList.remove("team__member--right");
+      slide.classList.remove("team__member--behind");
       slide.setAttribute("aria-hidden", true);
     });
+
     let nextSlideIndex = slideIndex + 1;
-    console.log(nextSlideIndex);
     let prevSlideIndex = slideIndex - 1;
-    console.log(prevSlideIndex);
     if (slideIndex == 0) {
       prevSlideIndex = this.slides.length - 1;
     } else if (slideIndex == this.slides.length - 1) {
       nextSlideIndex = 0;
     }
+    const filteredSlides = [...this.slides].filter(
+      item =>
+        item != this.slides[slideIndex] &&
+        item != this.slides[nextSlideIndex] &&
+        item != this.slides[prevSlideIndex]
+    );
+    filteredSlides.forEach(slide =>
+      slide.classList.add("team__member--behind")
+    );
 
     this.slides[nextSlideIndex].classList.add("team__member--right");
     this.slides[prevSlideIndex].classList.add("team__member--left");
     this.slides[slideIndex].classList.add("team__member--active");
     this.slides[slideIndex].setAttribute("aria-hidden", false);
-
+    //wyjatki jak np 0 -1 = undefined
     this.currentSlide = slideIndex;
   }
   nextSlide() {
