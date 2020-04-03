@@ -13,13 +13,15 @@ export default function ChangeClient(e, smallClients, allItems) {
   });
   restItems.forEach(item => {
     item.classList.add("opacity--none");
-
     item.classList.remove("comeFromRight");
+    item.classList.remove("comeFromRightRotate");
   });
   chosenItems.forEach(item => {
     item.classList.add("opacity--full");
     if (!item.classList.contains("rectangleImage")) {
       item.classList.add("comeFromRight");
+    } else {
+      item.classList.add("comeFromRightRotate");
     }
     item.classList.remove("opacity--none");
   });

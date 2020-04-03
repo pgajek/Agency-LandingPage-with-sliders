@@ -91,13 +91,17 @@
   padding: 5px 15px;
   position: relative;
   &::after {
-    content: '"';
+    content: "";
     display: block;
     position: absolute;
-    top: -30px;
-    left: -30px;
-    font-size: 10rem;
-    font-family: "LemonMilkBold";
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+    background-image: url("/assets/images/quote.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 .clienct__quote {
@@ -130,6 +134,12 @@
   }
   .clients__textWrapper {
     padding: 15px 150px;
+    &::after {
+      height: 40px;
+      width: 40px;
+      left: 100px;
+      top: -15px;
+    }
   }
   .clients__smallWrapper {
     justify-content: space-around;
@@ -191,9 +201,18 @@
   .clients__smallWrapper {
     justify-content: flex-start;
   }
+  .clients__textWrapper {
+    &::after {
+      top: -15px;
+      left: -15px;
+      height: 30px;
+      width: 30px;
+    }
+  }
 }
 @media (orientation: landscape) and (min-width: 1024px) {
   .clients {
+    max-height: 795px;
     justify-items: flex-start;
     grid-template-columns: 400px 1fr;
     grid-template-rows: 9rem 200px 130px;
@@ -215,7 +234,37 @@
     margin: 0 15px;
   }
   .clients__textWrapper {
-    max-width: 460px;
     padding: 15px;
+  }
+  .clients__quote {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1200px) {
+  .clients {
+    grid-template-areas:
+      "header header"
+      "clientWrapper ."
+      "clientWrapper textWrapper"
+      "clientWrapper smallWrapper"
+      "clientWrapper .";
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: 9rem 130px 150px 120px 100px;
+    &::before {
+      top: -15%;
+      width: 600px;
+      height: 600px;
+    }
+  }
+  .clients__header {
+    font-size: 6.2rem;
+  }
+  .clients__client--big {
+    width: 350px;
+    height: 350px;
+  }
+  .clients__textWrapper {
+    max-width: 657px;
   }
 }
