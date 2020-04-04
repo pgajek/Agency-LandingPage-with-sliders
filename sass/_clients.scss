@@ -131,6 +131,12 @@
       width: 350px;
       height: 350px;
     }
+    &::after {
+      top: -150px;
+      right: -150px;
+      width: 300px;
+      height: 300px;
+    }
   }
   .clients__textWrapper {
     padding: 15px 150px;
@@ -179,6 +185,12 @@
   .clients__textWrapper {
     max-width: 460px;
     padding: 15px;
+    &::after {
+      height: 40px;
+      width: 40px;
+      left: -20px;
+      top: -20px;
+    }
   }
 }
 @media (orientation: landscape) {
@@ -222,6 +234,12 @@
       width: 400px;
       height: 400px;
     }
+    &::after {
+      top: -150px;
+      right: -150px;
+      width: 300px;
+      height: 300px;
+    }
   }
   .clients__client--big {
     width: 220px;
@@ -235,6 +253,7 @@
   }
   .clients__textWrapper {
     padding: 15px;
+    max-width: 500px;
   }
   .clients__quote {
     font-size: 2rem;
@@ -256,6 +275,12 @@
       width: 600px;
       height: 600px;
     }
+    &::after {
+      top: -200px;
+      right: -200px;
+      width: 400px;
+      height: 400px;
+    }
   }
   .clients__header {
     font-size: 6.2rem;
@@ -266,5 +291,15 @@
   }
   .clients__textWrapper {
     max-width: 657px;
+  }
+}
+@media (orientation: landscape) and (min-width: 1400px) {
+  .clients {
+    &::after {
+      top: -250px;
+      right: -250px;
+      width: 500px;
+      height: 500px;
+    }
   }
 }
