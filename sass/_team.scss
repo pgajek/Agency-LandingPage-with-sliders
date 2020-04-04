@@ -1,4 +1,6 @@
 .team {
+  position: relative;
+  z-index: 1;
   display: grid;
   width: 100vw;
   height: 400px;
@@ -166,7 +168,7 @@
 }
 @media (orientation: portrait) and (min-width: 768px) {
   .team {
-    height: 65vh;
+    height: 70vh;
     max-height: 795px;
     grid-template-rows: 12rem 1fr;
   }
@@ -231,6 +233,7 @@
   .team {
     height: 85vh;
     max-height: 795px;
+    padding: 20px 0;
   }
   .team__header {
     font-size: 6.2rem;
@@ -330,6 +333,10 @@
       -moz-transform: translate(-50%, -50%) scale(0);
       -ms-transform: translate(-50%, -50%) scale(0);
       -o-transform: translate(-50%, -50%) scale(0);
+      .team__memberName,
+      .team__memberRole {
+        opacity: 0;
+      }
     }
   }
 }

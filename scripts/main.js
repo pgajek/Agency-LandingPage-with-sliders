@@ -16,7 +16,6 @@ navLinks.forEach(link =>
   link.addEventListener("click", () => HandleNavLinkClick(nav, burger))
 );
 const TeamSlider = new Slider(".team__slide", true);
-////////////////////
 
 const smallClients = document.querySelectorAll(".clients__client--small");
 const allItems = document.querySelectorAll("[data-client]");
