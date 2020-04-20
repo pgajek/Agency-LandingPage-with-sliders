@@ -72,6 +72,9 @@ body {
   font-size: 1.6rem;
   position: relative;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .opacity {
   &--full {
