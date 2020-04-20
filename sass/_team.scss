@@ -103,6 +103,7 @@
   -o-transform: rotate(-45deg) translate(-50%, -50%);
 }
 .team__memberName {
+  transition: 0.4s linear;
   width: 180px;
   height: 30px;
   position: absolute;
@@ -160,6 +161,11 @@
     -ms-transform: skew(38deg);
     -o-transform: skew(38deg);
   }
+  transition: 0.4s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);

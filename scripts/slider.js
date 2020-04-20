@@ -14,7 +14,7 @@ export default class Slider {
     this.nextSlideClass = nextClass;
   }
   changeSlide(slideIndex) {
-    this.slides.forEach(slide => {
+    this.slides.forEach((slide) => {
       slide.classList.remove("team__member--active");
       slide.classList.remove("team__member--left");
       slide.classList.remove("team__member--right");
@@ -30,12 +30,12 @@ export default class Slider {
       nextSlideIndex = 0;
     }
     const filteredSlides = [...this.slides].filter(
-      item =>
+      (item) =>
         item != this.slides[slideIndex] &&
         item != this.slides[nextSlideIndex] &&
         item != this.slides[prevSlideIndex]
     );
-    filteredSlides.forEach(slide =>
+    filteredSlides.forEach((slide) =>
       slide.classList.add("team__member--behind")
     );
 
@@ -43,7 +43,6 @@ export default class Slider {
     this.slides[prevSlideIndex].classList.add("team__member--left");
     this.slides[slideIndex].classList.add("team__member--active");
     this.slides[slideIndex].setAttribute("aria-hidden", false);
-    //wyjatki jak np 0 -1 = undefined
     this.currentSlide = slideIndex;
   }
   nextSlide() {
