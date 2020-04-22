@@ -1,4 +1,4 @@
-let isDown = false;
+export let isDown = false;
 let startX;
 let scrollLeft;
 let eventX;
@@ -31,5 +31,11 @@ export const swipingMove = (e) => {
   swiper.scrollLeft = scrollLeft - walk;
 };
 export const swipingEnd = () => {
+  isDown = false;
+};
+export const mouseLeave = () => {
+  isDown = false;
+};
+export const mouseUp = () => {
   isDown = false;
 };
